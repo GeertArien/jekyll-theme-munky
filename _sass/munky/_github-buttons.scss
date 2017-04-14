@@ -1,0 +1,19 @@
+aside ul.github-buttons {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+
+ul.github-buttons li {
+  float: left;
+  margin-left: 10px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    float: right;
+  }
+}

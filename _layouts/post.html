@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {% if site.github.username and page.repo %}
+  <aside class="col-100 buttons">
+
+    {% include github_buttons.html %}
+  </aside>
+  {% elsif page.download %}
+  <aside class="col-100 buttons">
+    <a href="{{ "/assets/downloads/" | append: page.download | relative_url }}"
+      download target="_blank" class="btn-classic" rel="nofollow">
+          <i class="fa fa-download" aria-hidden="true"></i>
+          Download
+    </a>
+  </aside>
+  {% endif %}
+
+  <header class="col-100 heading">
+
+  	<h1 class="title" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    {% if page.type == "post" %}
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      Published on <span>{{ page.date | date: "%b %-d, %Y" }}</span>
+    </time>
+    {% endif %}
+
+    {% if page.last_modified_at %}
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        - Last modified on <span>{{ page.last_modified_at | date: "%b %-d, %Y" }}</span>
+      </time>
+    {% endif %}
+
+    {{ page.excerpt }}
+
+  </header>
+
+  <aside class="col-100">
+    {% include share_buttons.html %}
+  </aside>
+
+  <div class="col-100 post-content" itemprop="articleBody">
+    {{ content | remove_first:page.excerpt }}
+  </div>
+
+  {% if site.github.username and page.repo %}
+  <aside class="col-100 buttons bottom">
+    {% include github_buttons.html %}
+  </aside>
+  {% elsif page.download %}
+  <aside class="col-100 buttons bottom">
+    <a href="{{ "/assets/downloads/" | append: page.download | relative_url }}"
+      download target="_blank" class="btn-classic" rel="nofollow">
+          <i class="fa fa-download" aria-hidden="true"></i>
+          Download
+    </a>
+  </aside>
+  {% endif %}
+
+  <aside class="col-100">
+    {% include share_buttons.html %}
+  </aside>
+
+  {% if page.tags.size > 0 %}
+  <div class="tags-links col-100">
+        <span><i class="fa fa-tags"></i> Tags</span>
+        <span>{{ page.tags | join: ', ' }}</span>
+  </div>
+  {% endif %}
+
+  <div id="more" class="col-100">
+    {% if page.type == "post" %}
+    <a href="{{ site.baseurl }}{% link index.md %}" class="btn btn-secondary-reverse">
+      More Articles
+    </a>
+    {% elsif page.type == "project" %}
+    <a href="{{ site.baseurl }}{% link projects.md %}" class="btn btn-secondary-reverse">
+      More Projects
+    </a>
+    {% endif %}
+  </div>
+
+  {% if jekyll.environment == 'production' and  site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

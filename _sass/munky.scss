@@ -1,0 +1,43 @@
+// Define defaults for each variable.
+
+$base-default-width: 960px !default;
+$base-text-width: 540px !default;
+
+$base-font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto",
+"Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif !default;
+$base-font-size:   18px !default;
+$small-font-size:  $base-font-size * 0.8 !default;
+$base-font-weight: 400 !default;
+$base-font-color:  #333333 !default;
+
+$base-primary-color: #0084B4 !default;
+$base-secondary-color: #FF2C00 !default;
+
+$subheading-color: #B0B0B0 !default;
+$article-introduction-color: #666666 !default;
+$caption-color: #888888 !default;
+
+$base-line-height: 30px !default;
+$small-line-height: $base-line-height * 0.85 !default;
+$base-background-color: #FFFFFF !default;
+$grey-background-color: #E8E8E8 !default;
+
+$masonry-gap: 0.7em !default;
+
+
+// Import partials.
+@import
+  "munky/about",
+  "munky/post",
+  "munky/base",
+  "munky/blog",
+  "munky/footer",
+  "munky/github-buttons",
+  "munky/header",
+  "munky/icons",
+  "munky/photography",
+  "munky/projects",
+  "munky/share-buttons",
+  "munky/sidebar",
+  "munky/syntax-highlighting"
+;

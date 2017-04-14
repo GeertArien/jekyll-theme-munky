@@ -1,0 +1,50 @@
+.fa-fw {
+    width: 1.28571em;
+    text-align: center;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-icons .fa {
+    color: #000;
+}
+
+.social-icons .fa-instagram {
+    color: #517fa4;
+}
+
+.social-icons .fa-github {
+    color: #171516;
+}
+
+.share-icons .fa-linkedin-square,
+.social-icons .fa-linkedin,
+.social-icons .fa-linkedin-square {
+    color: #007bb6;
+}
+
+.share-icons .fa-facebook-official {
+  color: #3c5a98;
+}
+
+.share-icons .fa-twitter-square,
+.social-icons .fa-twitter {
+  color: #47c7fa;
+}
+
+.share-icons .fa-google-plus-square {
+  color: #dd4b39;
+}
+
+.share-icons .fa-envelope-o,
+.share-icons .fa-print,
+.fa-flickr {
+  color: #615f5d;
+}

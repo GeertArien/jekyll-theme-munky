@@ -1,0 +1,74 @@
+article header p:last-child {
+    font-weight: bold;
+    color: $article-introduction-color;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: underline;
+      color: $article-introduction-color;
+    }
+
+    a:hover {
+      color: $base-primary-color;
+    }
+}
+
+article .post-content > :first-child {
+  margin-top: 0;
+}
+
+article .post-content > :last-child {
+  margin-bottom: 0;
+}
+
+article .post-content figure {
+  line-height: 1.1em;
+  margin: 2em 0;
+}
+
+article .post-content figcaption {
+    font-size: 0.9em;
+    color: $caption-color;
+    font-style: normal;
+}
+
+article .post-content img {
+    width: 100%;
+    height: auto;
+}
+
+.article .tags-links {
+  font-size: 1em;
+
+  span {
+    display: block;
+
+    &:first-child {
+      font-weight: bold;
+    }
+
+    &:last-child {
+      line-height: 1.3em;
+    }
+  }
+}
+
+article.article ul {
+  padding-left: 30px;
+}
+
+.article #more {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 8%;
+}
+
+aside.buttons {
+
+  line-height: 0.7em;
+
+
+  &.bottom {
+    margin-bottom: 5%;
+  }
+}

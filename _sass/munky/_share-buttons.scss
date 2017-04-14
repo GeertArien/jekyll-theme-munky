@@ -1,0 +1,28 @@
+aside h3 {
+  color: $subheading-color;
+}
+
+aside ul.share-icons {
+    list-style: none;
+    display: inline-block;
+    font-size: 2em;
+    width: 100%;
+    padding: 0;
+}
+
+ul.share-icons li {
+  float: left;
+  margin-left: 10px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    float: right;
+  }
+
+  i:hover {
+    color: $base-primary-color;
+  }
+}

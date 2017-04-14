@@ -1,0 +1,96 @@
+<footer>
+    <div id="foot-nav" class="group">
+        <div class="col-25">
+            <p>
+              <strong>Site Map</strong>
+            </p>
+
+            <ul class="pages">
+              {% assign sorted_pages = site.pages | sort:"order" %}
+              {% for node in sorted_pages %}
+                {% if node.title and node.order %}
+                <li class="nav-link">
+                  <a class="reverse" href="{{ node.url | relative_url }}">{{ node.title | escape }}</a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-25">
+
+            <p>
+              <strong>Contact</strong>
+            </p>
+
+            <ul class="social-media-list">
+                <li>
+                    <a class="reverse email" href="" title="Send me an email">
+                        <span class="username">Email</span>
+                    </a>
+                </li>
+
+                {% if site.linkedin.username %}
+                  <li>
+                      <a class="reverse" href="https://www.linkedin.com/in/{{ site.linkedin.username }}" title="Follow me on LinkedIn">
+                          <span class="username">LinkedIn</span>
+                      </a>
+                  </li>
+                {% endif %}
+
+                {% if site.github.username %}
+                  <li>
+                      <a class="reverse" href="https://github.com/{{ site.github.username }}" title="Follow me on GitHub">
+                          <span class="username">GitHub</span>
+                      </a>
+                  </li>
+                {% endif %}
+
+                {% if site.flickr.username %}
+                  <li>
+                      <a class="reverse" href="https://www.flickr.com/photos/{{ site.flickr.username }}/" title="Connect with me on Flickr">
+                          <span class="username">Flickr</span>
+                      </a>
+                  </li>
+                {% endif %}
+
+                {% if site.twitter.username %}
+                  <li>
+                      <a class="reverse" href="https://twitter.com/{{ site.twitter.username }}/" title="Follow me on Twitter">
+                          <span class="username">Twitter</span>
+                      </a>
+                  </li>
+                {% endif %}
+
+                {% if site.instagram.username %}
+                  <li>
+                      <a class="reverse" href="https://www.instagram.com/{{ site.instagram.username }}/" title="Connect with me on Instagram">
+                          <span class="username">Instagram</span>
+                      </a>
+                  </li>
+                {% endif %}
+
+            </ul>
+        </div>
+
+        <div class="col-50">
+            <p id="rss-subscribe"><strong>Subscribe <a class="reverse underline" href="/feed.xml">via RSS</a></strong></p>
+            <p id="poweredby">Powered by
+              <a class="reverse" href="https://jekyllrb.com/">Jekyll</a>,
+              <a class="reverse" href="http://sass-lang.com/">Sass</a>,
+              <a class="reverse" href="https://jquery.com/">Jquery</a>,
+              <a class="reverse" href="https://disqus.com/">Disqus</a>,
+              <a class="reverse" href="https://www.andrerinas.de/simplelightbox.html">Simplelightbox</a>
+              and <a class="reverse" href="https://pages.github.com/">GitHub Pages</a>.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="disclaimer">
+      <p>
+        Copyright © <span id="year"></span> <a class="reverse email" href="">{{ site.author.name | escape }}</a>.
+      </p>
+    </div>
+
+</footer>

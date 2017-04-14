@@ -1,0 +1,93 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Munky Theme
+email: virtual@munky.com
+description: > # this means to ignore newlines until "baseurl:"
+  Munky is jekyll theme for portfolio websites. It features a blog, project,
+  photography and about page.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/images/logo.png
+lang: en_US
+
+author:
+  name: Virtual Munky
+  bio: Jekyll theme for portfolio websites
+  location: Antwerp, BE
+  twitter: GeertArien
+
+twitter:
+  username: geertarien
+linkedin:
+  username: geertarien
+github:
+  username:  geertarien
+flickr:
+  username: geertarien
+
+social:
+  name:
+  links:
+
+webmaster_verifications:
+  bing:
+
+google_analytics:
+
+disqus:
+  shortname:
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+    type: post
+  projects:
+    output: true
+    permalink: /projects/:title/
+    type: project
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/logo.png
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      type: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      type: "project"
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  style: :compressed

@@ -1,0 +1,37 @@
+footer {
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+    padding: 4em 0;
+    text-align: center;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.20) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.20) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.20) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00000000', endColorstr='#33000000',GradientType=0 );
+    /* IE6-9 */
+}
+
+footer p#poweredby {
+  margin: 10% 10% 0%;
+}
+
+footer #disclaimer {
+  padding-top: 10px;
+  text-align: center;
+}
+
+footer #disclaimer p {
+  display: inline;
+  border-top: 1px solid $base-secondary-color;
+  padding: 20px 30px;
+}
+
+footer li {
+    display: block;
+}
+
+footer #poweredby a {
+  font-style: italic;
+}

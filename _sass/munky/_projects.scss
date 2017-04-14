@@ -1,0 +1,65 @@
+#project-head {
+  float: none;
+}
+
+.projects h2 {
+  color: #000;
+}
+
+.projects {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.projects article {
+  margin-bottom: 40px;
+}
+
+.projects figure {
+    position: relative;
+    height: 100%;
+    background: $grey-background-color;
+    line-height: 24px;
+    font-size: $base-font-size;
+    border: 1px solid $grey-background-color;
+    transition: background-color 0.5s ease-in-out, border 0.3s ease;
+}
+
+.projects figure > div {
+  transition: opacity 0.5s ease;
+}
+
+.projects figure:hover {
+   border: 1px solid $base-primary-color;
+   background-color: #FCFCFC;
+}
+
+.projects figure:hover > div {
+  opacity: 1;
+}
+
+.projects figcaption {
+    padding: 1.75em 1em;
+    font-size: 0.9em;
+}
+
+.projects figure a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    color: transparent;
+    text-indent: -90000px;
+}
+
+.projects .tags-links span {
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width:520px) {
+  .projects figure > div {
+    opacity: 0.9;
+  }
+}

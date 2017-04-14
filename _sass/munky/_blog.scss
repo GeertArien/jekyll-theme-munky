@@ -1,0 +1,14 @@
+#articles article {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #DFDFDF;
+}
+
+#articles article .more:hover {
+    color: $base-font-color;
+    border: none;
+}
+
+#articles article p:last-of-type {
+    margin-bottom: 0;
+}

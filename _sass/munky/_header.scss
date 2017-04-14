@@ -1,0 +1,83 @@
+header[role="banner"] {
+    height: 335px;
+    padding: 15px 0 50px;
+    line-height: 40px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#33000000', endColorstr='#00000000',GradientType=0 );
+    /* IE6-9 */
+}
+
+header[role="banner"] img {
+    height: 110px;
+}
+
+nav[role="navigation"] {
+    max-width: $base-default-width;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+nav[role="navigation"] ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav[role="navigation"] li {
+    font-size: 20px;
+    margin: 0 20px;
+    display: block;
+}
+
+nav[role="navigation"] li a {
+    color: $base-font-color;
+    position: relative;
+}
+
+nav[role="navigation"] li a:hover {
+    color: $base-primary-color;
+    position: relative;
+}
+
+nav[role="navigation"] li a.active::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    margin-left: -20px;
+    margin-bottom: -2px;
+    background: $base-primary-color;
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+@media (min-width: 756px) {
+
+    header[role="banner"] {
+        height: 350px;
+        line-height: 50px;
+    }
+
+    header[role="banner"] img {
+        height: auto;
+    }
+
+    nav[role="navigation"] li {
+        display: inline;
+    }
+
+    nav[role="navigation"] li a.active::after {
+        margin-left: -2px;
+        left: 50%;
+        bottom: -10px;
+    }
+}

@@ -1,0 +1,29 @@
+<header role="banner">
+  <a href="{{ "/" | relative_url}}">
+    <img src="{{ "/assets/images/logo-transparent.png" | relative_url }}" alt="{{ site.title | escape }}" class="center-block">
+  </a>
+  <nav role="navigation">
+    <ul>
+      <li>
+        <a href="/" {% if page.type == "post" or page.title == "Blog" %} class="active" {% endif %}>
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="/projects/" {% if page.type == "project" or page.title == "Projects" %} class="active" {% endif %}>
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/photography/" {% if page.title == "Photography" %} class="active" {% endif %}>
+          Photography
+        </a>
+      </li>
+      <li>
+        <a href="/about/" {% if page.title == "About Me" %} class="active" {% endif %}>
+          About Me
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

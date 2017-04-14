@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article id="project-head" class="col-100 heading">
+
+	<h1>{{ page.title | escape }}</h1>
+
+	{{ content }}
+
+</article>
+
+<section class="group projects">
+
+	{% for project in site.projects %}
+
+		<article class="col-33">
+				<figure>
+					<div>
+					 <img class="responsive" src="{{ project.image }}" alt="">
+				 </div>
+
+					 <figcaption>
+								<h2>{{ project.title }}</h2>
+								<p>{{ project.description }}</p>
+
+								{% if project.tags.size > 0 %}
+							  <div class="tags-links">
+							        <i class="fa fa-tags"></i>
+							        <span>{{ project.tags | join: ', ' }}</span>
+							  </div>
+							  {% endif %}
+
+								<a href="{{ project.url | relative_url }}">Read More</a>
+					 </figcaption>
+				</figure>
+		</article>
+
+	{% endfor %}
+
+</section>

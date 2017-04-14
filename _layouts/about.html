@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+
+<article id="about">
+	<figure>
+		<div class="col-50">
+			<img class="responsive" src="{{ "/assets/images/profile.jpg" | relative_url }}" alt="{{ site.author.name | escape }}">
+		</div>
+
+		<figcaption class="col-50">
+			<h1>{{ page.title | escape }}</h1>
+			<h5>{{ page.caption }}</h5>
+
+			{{ content }}
+
+			<ul class="social-icons">
+
+					<li>
+							<a class="email" href="" itemprop="sameAs" title="Send me an email">
+									<i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>
+							</a>
+					</li>
+
+					{% if site.linkedin.username %}
+					<li>
+							<a href="https://www.linkedin.com/in/{{ site.linkedin.username }}"
+								itemprop="sameAs" title="Follow me on LinkedIn">
+									<i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i>
+							</a>
+					</li>
+					{% endif %}
+
+					{% if site.github.username %}
+						<li>
+								<a href="https://github.com/{{ site.github.username }}"
+									itemprop="sameAs" title="Follow me on GitHub">
+										<i class="fa fa-fw fa-github" aria-hidden="true"></i>
+								</a>
+						</li>
+					{% endif %}
+
+					{% if site.flickr.username %}
+						<li>
+								<a href="https://www.flickr.com/photos/{{ site.flickr.username }}/"
+									itemprop="sameAs" title="Connect with me on Flickr">
+										<i class="fa fa-fw fa-flickr" aria-hidden="true"></i>
+								</a>
+						</li>
+					{% endif %}
+
+					{% if site.instagram.username %}
+						<li>
+								<a href="https://www.instagram.com/{{ site.instagram.username }}/"
+									itemprop="sameAs" title="Connect with me on Instagram">
+										<i class="fa fa-fw fa-instagram" aria-hidden="true"></i>
+								</a>
+						</li>
+					{% endif %}
+
+					{% if site.twitter.username %}
+						<li>
+								<a href="https://twitter.com/{{ site.twitter.username }}/"
+									itemprop="sameAs" title="Follow me on Twitter">
+										<i class="fa fa-fw fa-twitter" aria-hidden="true"></i>
+								</a>
+						</li>
+					{% endif %}
+
+			</ul>
+
+		</figcaption>
+	</figure>
+</article>

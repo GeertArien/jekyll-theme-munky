@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section id="articles">
+
+{% for post in site.posts %}
+  <article class="col-100">
+    <h1 class="title"><a class="reverse" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
+    <time datetime="{{post.date}}" pubdate="pubdate">
+      Published on
+      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    </time>
+    <p>{{ post.excerpt | strip_html | truncatewords: 45, '...' }}</p>
+    <a href="{{ post.url | relative_url }}" class="more">Read More</a>
+  </article>
+{% endfor %}
+
+</section>

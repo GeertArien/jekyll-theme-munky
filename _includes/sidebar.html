@@ -1,0 +1,77 @@
+<div class="sidebar col-100">
+    <div itemscope="" itemtype="http://schema.org/Person">
+        <div class="author__avatar">
+            <img src="{{ "/assets/images/profile-small.jpg" | relative_url }}" class="author__avatar" alt="{{ site.author.name | escape }}" itemprop="image">
+        </div>
+
+        <div class="author__content">
+            <h3 class="author__name" itemprop="name">{{ site.author.name | escape }}</h3>
+
+            <p class="author__bio" itemprop="description">
+                {{ site.author.bio | escape }}
+            </p>
+        </div>
+
+        <div class="author__urls-wrapper">
+            <button class="btn">Follow</button>
+            <ul class="author__urls social-icons">
+
+                <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                    <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">{{ site.author.location | escape }}</span>
+                </li>
+
+                <li>
+                    <a class="email reverse" href="" title="Send me an email" itemprop="sameAs">
+                        <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> Email
+                    </a>
+                </li>
+
+                {% if site.linkedin.username %}
+                <li>
+                    <a class="reverse" href="https://www.linkedin.com/in/{{ site.linkedin.username }}"
+                      itemprop="sameAs" title="Follow me on LinkedIn">
+                        <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </li>
+                {% endif %}
+
+                {% if site.github.username %}
+                  <li>
+                      <a class="reverse" href="https://github.com/{{ site.github.username }}"
+                        itemprop="sameAs" title="Follow me on GitHub">
+                          <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+                      </a>
+                  </li>
+                {% endif %}
+
+                {% if site.flickr.username %}
+      						<li>
+      								<a class="reverse" href="https://www.flickr.com/photos/{{ site.flickr.username }}/"
+                        itemprop="sameAs" title="Connect with me on Flickr">
+      										<i class="fa fa-fw fa-flickr" aria-hidden="true"></i> Flickr
+      								</a>
+      						</li>
+      					{% endif %}
+
+                {% if site.twitter.username %}
+                  <li>
+                      <a class="reverse" href="https://twitter.com/{{ site.twitter.username }}/"
+                        itemprop="sameAs" title="Follow me on Twitter">
+                          <i class="fa fa-fw fa-twitter" aria-hidden="true"></i> Twitter
+                      </a>
+                  </li>
+                {% endif %}
+
+                {% if site.instagram.username %}
+                  <li>
+                      <a class="reverse" href="https://www.instagram.com/{{ site.instagram.username }}/"
+                        itemprop="sameAs" title="Connect with me on Instagram">
+                          <i class="fa fa-fw fa-instagram" aria-hidden="true"></i> Instagram
+                      </a>
+                  </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </div>
+</div>
