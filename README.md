@@ -22,9 +22,9 @@
     * [Projects](#projects)
     * [Photography gallery](#photography-gallery)
     * [About me page](#about-me-page)
+    * [Customization](#customization)
     * [Enabling comments (via Disqus)](#enabling-comments-via-disqus)
     * [Enabling Google Analytics](#enabling-google-analytics)
-    * [Customization](#customization)
   * [Contributing](#contributing)
   * [License](#license)
 
