@@ -89,7 +89,7 @@ defaults:
 Refers to files within the `_layouts` directory, that define the markup for your theme.
 
   - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
-  - `blog.html` &mdash; The layout for your landing-page / home-page / index-page.
+  - `home.html` &mdash; The layout for your landing-page / home-page / index-page.
   - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
   - `post.html` &mdash; The layout for your posts and projects.
   - `about.html` &mdash; The layout for your about-page.
@@ -245,7 +245,7 @@ the following variables:
 
 The following markdown files are required in your jekyll site's root folder:
 
-  - `index.md` &mdash; Layout: *blog*
+  - `index.md` &mdash; Layout: *home*
   - `projects.md` &mdash; Layout: *projects*
   - `photography.md` &mdash; Layout: *photography*
   - `about.md` &mdash; Layout: *about*

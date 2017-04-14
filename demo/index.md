@@ -1,6 +1,5 @@
 ---
-layout: blog
-title: Blog
+layout: home
 permalink: /
 order: 1
 sidebar: true

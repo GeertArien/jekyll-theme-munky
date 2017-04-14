@@ -67,6 +67,8 @@ defaults:
 # Build settings
 markdown: kramdown
 
+theme: "jekyll-theme-munky"
+
 gems:
   - jekyll-feed
 
