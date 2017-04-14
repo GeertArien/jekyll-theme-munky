@@ -2,7 +2,7 @@
 
 *Munky is jekyll theme for portfolio websites*. It features a blog, project, photography and about page.
 
-[Theme preview](https://www.geertarien.com)
+[Theme preview](http://www.geertarien.com)
 
 ![munky theme preview](/screenshot.png)
 
@@ -55,8 +55,6 @@ following configuration data to the `_config.yml` file:
 ```
 
 ## Contents At-A-Glance
-
-Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
 
 ### Layouts
 
@@ -115,9 +113,90 @@ The following sub-directories are required:
 
 ## Usage
 
+### General
+
+#### Logo
+
+To change the header logo replace the `/assets/images/logo-transparent.png`
+image:
+
+```
+assets
+└───images
+    └───profile-transparent.png
+```
+
+For maximum compatibility use an image with a height of 236 pixels and a
+transparent background.
+
+#### Email
+
+A link to your email address is provided in the _footer_, _sidebar_ and _about page_.
+For this to work your email address needs to be configured in your `_config.yml` file:
+
+```yaml
+twitter:
+  username: accountname
+linkedin:
+  username: accountname
+github:
+  username: accountname
+flickr:
+  username: accountname
+```
+
+The link to your email is set using javascript to mislead basic web crawlers. It
+is still advised to use an email service with strong spam filters.
+
+#### Social media links
+
+Your social media links are displayed in the _footer_, _sidebar_ and _about page_.
+They need to be configured in your `_config.yml` file:
+
+```yaml
+email: virtual@munky.com
+```
+
+**Don't forget to set up your github username if you're gonna link to
+repositories from your projects.**
+
+#### Sidebar
+
+Change the following data in your `_config.yml` file to change the information
+in the sidebar:
+
+```yaml
+author:
+  name: Virtual Munky
+  bio: Jekyll theme for portfolio websites
+  location: Antwerp, BE
+```
+
+To change the rounded profile picture replace the `/assets/images/profile-small.jpg`
+image:
+
+```
+assets
+└───images
+    └───profile-small.jpg
+```
+
+#### Images
+
+In markdown files you can use the following syntax to render images with
+(or without) captions:
+
+```markdown
+{% include image.html
+name="example.jpg"
+caption="Est orci, gravida pede vestibulum sodales pellentesque neque condimentum, occaecat luctus fermentum."
+alt="example"
+%}
+```
+
 ### Pages
 
-On top of the default jekyll frontmatter variables, munky theme also uses
+On top of the default frontmatter variables, munky theme also uses
 the following variables:
 
 ```yaml
@@ -133,22 +212,75 @@ the following variables:
 
 The following markdown files are required in your jekyll site's root folder:
 
-  - `index.md` &mdash; The index for your website, uses `blog` as layout.
-  - `projects.md` &mdash; Your projects page.
-  - `photography.md` &mdash; Your photography-page.  
-  - `about.md` &mdash; Your about page.
-    - You can set the caption using frontmatter:
-      ```yaml
-        caption: Super awesome caption.
-      ```
+  - `index.md` &mdash; Layount: *blog*.
+  - `projects.md` &mdash; Layout: *projects*.
+  - `photography.md` &mdash; Layout: *photography*.
+  - `about.md` &mdash; Layout: *about*.
 
 ### Blogposts
 
+Blogposts follow the default jekyll standard. Exclusive to posts is the
+`last_modified_at` frontmatter variable. This variable, that is also
+used by the jekyll-seo-tag plugin, shows the date the post was last changed
+below the title.
+
+```yaml
+  last_modified_at: 2017-04-07
+```
+
 ### Projects
+
+Projects use the *post* layout but add some extra features through the following
+frontmatter variables:
+
+```yaml
+  # The description for the project overview page.
+  description: Ultrices dapibus felis dolor sed, augue scelerisque, ante ligula
+               aenean aliquam feugiat eget.
+  # Link to the github repository of the project. To use this feature you need to set the name of your github account in _config.yml .
+  repo: example
+  # Only in case the repo is not set, you can use the download variable to link to a file in the /assets/download directory.
+  download: example.zip
+  # Link to the image for the project overview page.
+  image: /assets/images/projects/example.jpg
+```
 
 ### Photography gallery
 
+To add images to the photography page, simply add the images to the
+`/assets/images/photography/` directory along with a thumbnail version named
+`<filename>_thumb.<extension>`:
+
+```
+assets
+└───images
+    └───photography
+         │   01_thumb.jpg
+         │   01.jpg
+         │   02_thumb.jpg
+         │   02.jpg
+         │   ...
+```
+
+### About me page
+
+A caption below the title can be set using frontmatter:
+
+  ```yaml
+    caption: Super awesome caption.
+  ```
+
+To change the profile picture replace the `/assets/images/profile.jpg` image:
+
+```
+assets
+└───images
+    └───profile.jpg
+```
+
 ### Customization
+
+#### General
 
 To override the default structure and style of munky, simply create the
 concerned directory at the root of your site, copy the file you wish to
@@ -158,21 +290,17 @@ e.g., to override the [`_includes/head.html `](_includes/head.html) file to
  `_includes/head.html` from munky gem folder to `<yoursite>/_includes` and start
   editing that file.
 
-To **override the default CSS**, the file has to exist at your site source. Do either of the following:
-- Create a new instance of `main.scss` at site source.
-  - Create a new file `main.scss` at `<your-site>/assets/`
-  - Add the frontmatter dashes, and
-  - Add `@import "munky";`, to `<your-site>/assets/main.scss`
-  - Add your custom CSS.
-- Download the file from this repo
+#### CSS
+
+To **configure the munky CSS variables**, the `munky.scss` file has to exist at your site source:
+
+  - Create  a new file `munky.scss` at `<your-site>/_sass/`
+  - Copy the contents at [_sass/munky.scss](_sass/munky.scss) onto the `munky.scss` you just created, and edit away!
+
+To **override the default CSS**, the `main.scss` file has to exist at your site source:
+
   - Create  a new file `main.scss` at `<your-site>/assets/`
   - Copy the contents at [assets/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
-- Copy directly from jekyll-theme-munky gem
-  - Go to your local jekyll-theme-munky gem installation directory ( run `bundle show jekyll-theme-munky` to get the path to it ).
-  - Copy the `assets/` folder from there into the root of `<your-site>`
-  - Change whatever values you want, inside `<your-site>/assets/main.scss`
-
---
 
 ### Enabling comments (via Disqus)
 
@@ -190,7 +318,6 @@ You can find out more about Disqus' shortnames [here](https://help.disqus.com/cu
 
 Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
 
---
 
 ### Enabling Google Analytics
 
