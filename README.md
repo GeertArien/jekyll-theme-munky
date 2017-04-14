@@ -324,7 +324,7 @@ To **configure the munky SCSS variables**, the `munky.scss` file has to exist at
 To **override the default CSS**, the `main.scss` file has to exist at your site source:
 
   - Create  a new file `main.scss` at `<your-site>/assets/css/`
-  - Copy the contents at [assets/css/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
+  - Copy the contents at [assets/css/main.scss](assets/css/main.scss) onto the `main.scss` you just created, and edit away!
 
 ### Enabling comments (via Disqus)
 
