@@ -1,6 +1,6 @@
 # munky
 
-*Munky is jekyll theme for portfolio websites*. It features a blog, project, photography and about page.
+*Munky is a jekyll theme for portfolio websites*. It features a blog, project, photography and about page.
 
 [Theme preview](http://www.geertarien.com)
 
@@ -26,10 +26,10 @@ And then execute:
 
 ## Getting started
 
-Wether you're using Munky theme as a theme gem or as a fork, the easiest way to
+Wether you're using munkye as a theme gem or as a fork, the easiest way to
 get started is to copy the content from the `demo` folder to your jekyll
-website's root folder. It adds all the files and required settings
-to get the most of out of the theme, as well as some example data to get started.
+website's root folder. It adds all the required files and settings
+to get the most of out of the theme and adds some example data to get started.
 
 As a bare minimum for the theme to work properly you will need to add the
 following configuration data to the `_config.yml` file:
@@ -80,7 +80,7 @@ Refers to snippets of code within the `_includes` directory that can be inserted
   - `sidebar.html` &mdash; Defines the site's sidebar section.
   - `github-buttons.html` &mdash; Inserts github repository buttons for projects.
   - `share-buttons.html` &mdash; Inserts social media share buttons for projects and posts.
-  - `image.html` &mdash; Defines how are images are generated that are defined in markdown.
+  - `image.html` &mdash; Defines how are images defined in markdown are generated.
 
 ### Sass
 
@@ -135,6 +135,18 @@ A link to your email address is provided in the _footer_, _sidebar_ and _about p
 For this to work your email address needs to be configured in your `_config.yml` file:
 
 ```yaml
+email: virtual@munky.com
+```
+
+The link to your email is set using javascript to mislead basic web crawlers. It
+is still advised to use an email service with a strong spam filter.
+
+#### Social media links
+
+Your social media links are displayed in the _footer_, _sidebar_ and _about page_.
+They need to be configured in your `_config.yml` file:
+
+```yaml
 twitter:
   username: accountname
 linkedin:
@@ -145,20 +157,8 @@ flickr:
   username: accountname
 ```
 
-The link to your email is set using javascript to mislead basic web crawlers. It
-is still advised to use an email service with strong spam filters.
-
-#### Social media links
-
-Your social media links are displayed in the _footer_, _sidebar_ and _about page_.
-They need to be configured in your `_config.yml` file:
-
-```yaml
-email: virtual@munky.com
-```
-
 **Don't forget to set up your github username if you're gonna link to
-repositories from your projects.**
+repositories in your projects.**
 
 #### Sidebar
 
@@ -196,7 +196,7 @@ alt="example"
 
 ### Pages
 
-On top of the default frontmatter variables, munky theme also uses
+On top of the default FrontMatter variables, munky theme also uses
 the following variables:
 
 ```yaml
@@ -212,15 +212,15 @@ the following variables:
 
 The following markdown files are required in your jekyll site's root folder:
 
-  - `index.md` &mdash; Layount: *blog*.
-  - `projects.md` &mdash; Layout: *projects*.
-  - `photography.md` &mdash; Layout: *photography*.
-  - `about.md` &mdash; Layout: *about*.
+  - `index.md` &mdash; Layout: *blog*
+  - `projects.md` &mdash; Layout: *projects*
+  - `photography.md` &mdash; Layout: *photography*
+  - `about.md` &mdash; Layout: *about*
 
 ### Blogposts
 
 Blogposts follow the default jekyll standard. Exclusive to posts is the
-`last_modified_at` frontmatter variable. This variable, that is also
+`last_modified_at` FrontMatter variable. This variable, that is also
 used by the jekyll-seo-tag plugin, shows the date the post was last changed
 below the title.
 
@@ -231,15 +231,17 @@ below the title.
 ### Projects
 
 Projects use the *post* layout but add some extra features through the following
-frontmatter variables:
+FrontMatter variables:
 
 ```yaml
   # The description for the project overview page.
   description: Ultrices dapibus felis dolor sed, augue scelerisque, ante ligula
                aenean aliquam feugiat eget.
-  # Link to the github repository of the project. To use this feature you need to set the name of your github account in _config.yml .
+  # Link to the github repository of the project. To use this feature you need
+  # to set the name of your github account in _config.yml .
   repo: example
-  # Only in case the repo is not set, you can use the download variable to link to a file in the /assets/download directory.
+  # Only in case the repo is not set, you can use the download variable to link
+  # to a file in the /assets/download directory.
   download: example.zip
   # Link to the image for the project overview page.
   image: /assets/images/projects/example.jpg
@@ -264,7 +266,7 @@ assets
 
 ### About me page
 
-A caption below the title can be set using frontmatter:
+A caption below the title can be set using FrontMatter:
 
   ```yaml
     caption: Super awesome caption.
@@ -292,15 +294,15 @@ e.g., to override the [`_includes/head.html `](_includes/head.html) file to
 
 #### CSS
 
-To **configure the munky CSS variables**, the `munky.scss` file has to exist at your site source:
+To **configure the munky SCSS variables**, the `munky.scss` file has to exist at your site source:
 
   - Create  a new file `munky.scss` at `<your-site>/_sass/`
   - Copy the contents at [_sass/munky.scss](_sass/munky.scss) onto the `munky.scss` you just created, and edit away!
 
 To **override the default CSS**, the `main.scss` file has to exist at your site source:
 
-  - Create  a new file `main.scss` at `<your-site>/assets/`
-  - Copy the contents at [assets/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
+  - Create  a new file `main.scss` at `<your-site>/assets/css/`
+  - Copy the contents at [assets/css/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
 
 ### Enabling comments (via Disqus)
 
