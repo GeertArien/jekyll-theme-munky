@@ -84,10 +84,11 @@ markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - /demo/*
 
 sass:
   style: :compressed

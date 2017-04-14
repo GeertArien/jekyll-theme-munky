@@ -250,6 +250,19 @@ below the title.
   last_modified_at: 2017-04-07
 ```
 
+Images that are used in blogposts should be placed inside a separate directory,
+with the same name as the post's filename, inside the `/assets/images/posts/`
+directory:
+
+```
+assets
+└───images
+    └───posts
+        └───2017-04-01-example-post
+             │   image01.jpg
+             │   ...
+```
+
 ### Projects
 
 Projects use the *post* layout but add some extra features through the following
@@ -267,6 +280,19 @@ FrontMatter variables:
   download: example.zip
   # Link to the image for the project overview page.
   image: /assets/images/projects/example.jpg
+```
+
+Images that are used in projects should be placed inside a separate directory,
+with the same name as the project's filename, inside the
+`/assets/images/projects/` directory:
+
+```
+assets
+└───images
+    └───projects
+        └───example-project
+             │   image01.jpg
+             │   ...
 ```
 
 ### Photography gallery
