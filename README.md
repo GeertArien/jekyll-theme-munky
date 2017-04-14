@@ -48,7 +48,7 @@ And then execute:
 
 ## Getting started
 
-Wether you're using munkye as a theme gem or as a fork, the easiest way to
+Wether you're using munky as a theme gem or as a fork, the easiest way to
 get started is to copy the content from the `demo` folder to your jekyll
 website's root folder. It adds all the required files and settings
 to get the most of out of the theme and adds some example data to get started.
@@ -57,23 +57,29 @@ As a bare minimum for the theme to work properly you will need to add the
 following configuration data to the `_config.yml` file:
 
 ```yaml
-  defaults:
-    - scope:
-        path: ""
-      values:
-        image: /assets/images/logo.png
-    -
-      scope:
-        path: ""
-        type: "posts"
-      values:
-        type: "post"
-    -
-      scope:
-        path: ""
-        type: "projects"
-      values:
-        type: "project"
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+    type: post
+  projects:
+    output: true
+    permalink: /projects/:title/
+    type: project
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      type: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      type: "project"
 ```
 
 ## Contents At-A-Glance
@@ -215,6 +221,11 @@ caption="Est orci, gravida pede vestibulum sodales pellentesque neque condimentu
 alt="example"
 %}
 ```
+
+This feature is currently only supported if you use munky as a fork. If you're
+using munky as a theme gem you need to copy the
+[`_includes/image.html `](_includes/image.html) file to your local includes
+folder `<yoursite>/_includes/` if you want to use this feature.
 
 ### Pages
 

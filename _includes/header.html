@@ -4,26 +4,14 @@
   </a>
   <nav role="navigation">
     <ul>
-      <li>
-        <a href="/" {% if page.type == "post" or page.title == "Blog" %} class="active" {% endif %}>
-          Blog
-        </a>
-      </li>
-      <li>
-        <a href="/projects/" {% if page.type == "project" or page.title == "Projects" %} class="active" {% endif %}>
-          Projects
-        </a>
-      </li>
-      <li>
-        <a href="/photography/" {% if page.title == "Photography" %} class="active" {% endif %}>
-          Photography
-        </a>
-      </li>
-      <li>
-        <a href="/about/" {% if page.title == "About Me" %} class="active" {% endif %}>
-          About Me
-        </a>
-      </li>
+      {% assign sorted_pages = site.pages | sort:"order" %}
+      {% for node in sorted_pages %}
+        {% if node.title and node.order %}
+        <li>
+          <a href="{{ node.url | relative_url }}" {% if page.url == node.url %} class="active" {% endif %} >{{ node.title | escape }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </nav>
 </header>

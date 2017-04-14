@@ -15,11 +15,10 @@ sit mauris commodo. Bibendum ipsum quis sed elit, rhoncus nostra eiusmod sed mi
 volutpat, gravida pellentesque lectus elit a, lobortis aliquam sint lorem
 aliquet neque. Sed in pulvinar ultrices viverra id nec, et erat amet.
 
-{% include image.html
-name="love-lock-monument-mas.jpg"
-caption="Est orci, gravida pede vestibulum sodales pellentesque neque condimentum, occaecat luctus fermentum."
-alt="Love lock monument MAS"
-%}
+<figure>
+<img src="/assets/images/projects/3d-initials-logo/love-lock-monument-mas.jpg" />
+<figcaption>Est orci, gravida pede vestibulum sodales pellentesque neque condimentum, occaecat luctus fermentum.</figcaption>
+</figure>
 
 Sagittis libero quis justo ex, tincidunt aenean ac ultricies, blandit donec eget
 quis elit mauris. Elit [quisque][blender], mauris neque vestibulum egestas
@@ -30,11 +29,10 @@ eros, etiam nulla ut, facilisis mattis nam. Suscipit et sodales etiam rhoncus,
 egestas pharetra leo amet vel nulla iaculis, cursus lacus consequat a, in ac,
 eget porttitor auctor donec vitae fusce elementum.
 
-{% include image.html
-name="logo-collage.jpg"
-caption="Felis sed curabitur tortor nullam, dignissim a enim metus urna nisl."
-alt="Logo collage"
-%}
+<figure>
+<img src="/assets/images/projects/3d-initials-logo/logo-collage.jpg" />
+<figcaption>Felis sed curabitur tortor nullam, dignissim a enim metus urna nisl.</figcaption>
+</figure>
 
 Habitasse suspendisse ut vel donec tincidunt turpis, et quis est eros nisl
 volutpat, porta velit duis hendrerit sit auctor egestas. Fermentum sollicitudin

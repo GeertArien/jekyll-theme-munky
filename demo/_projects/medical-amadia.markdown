@@ -16,11 +16,10 @@ ultricies netus rhoncus mi, mi a scelerisque pede. Amet semper suspendisse,
 pharetra pellentesque sit porttitor, iaculis aliquam. Quis metus libero mi diam
 rhoncus donec.
 
-{% include image.html
-name="amadia-view.jpg"
-caption="Elit amet, leo interdum, leo tortor quam eget in sapien. Iste in gravida natoque."
-alt="Antananarivo view"
-%}
+<figure>
+<img src="/assets/images/projects/medical-amadia/amadia-view.jpg" />
+<figcaption>Elit amet, leo interdum, leo tortor quam eget in sapien. Iste in gravida natoque.</figcaption>
+</figure>
 
 Malesuada sollicitudin aliquam placerat integer, sodales sit lacus ipsa nec
 auctor, erat commodo duis etiam [luctus ligula][amadia]. Tincidunt dignissim
@@ -33,11 +32,10 @@ quam. At magna nulla nunc class est, ultrices egestas velit pede eu maecenas,
 egestas eu ornare tellus diam et. Diam mollis pede in purus, nec
 [vehicula][postgresql] pretium mauris.
 
-{% include image.html
-name="odoo-modules.jpg"
-caption="Lorem sit, justo viverra vulputate neque amet arcu ante, ac suspendisse ipsum."
-alt="Odoo modules"
-%}
+<figure>
+<img src="/assets/images/projects/medical-amadia/odoo-modules.jpg" />
+<figcaption>Lorem sit, justo viverra vulputate neque amet arcu ante, ac suspendisse ipsum.</figcaption>
+</figure>
 
 Orci dictum accumsan mi, euismod sagittis, sed ipsum non sed porta, dolor urna
 odio ut, a ante condimentum ornare erat. Lacus habitasse, porttitor non aenean,
@@ -96,11 +94,10 @@ Taciti maecenas magna, mi a praesent, etiam sagittis dolor vitae:
 * Hospitalizations
 * Automated stock management
 
-{% include image.html
-name="odoo-hospitalization.jpg"
-caption="Posuere amet a mattis, non nascetur justo tempor."
-alt="Odoo hospitalization"
-%}
+<figure>
+<img src="/assets/images/projects/medical-amadia/odoo-hospitalization.jpg" />
+<figcaption>Posuere amet a mattis, non nascetur justo tempor.</figcaption>
+</figure>
 
 Consectetuer sagittis ipsum, [felis][debian] per urna, luctus amet quisque ac
 cras velit mattis. Tempor neque semper, dictum sapien nec at elementum arcu, vel

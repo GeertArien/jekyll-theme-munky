@@ -11,8 +11,8 @@ The Munky theme is aimed at portfolio websites. It features a blog, project,
 photography and about page. The theme is customizable through the `_config.yml`
 settings and by changing the sass variables in `_sass\munky.scss`.
 
-Support is included for [disqus] comments, [google analytics] and the following
-jekyll plugins: [jekyll-feed], [jekyll-seo-tag] and [jekyll-sitemap].
+Support is included for [disqus] comments, [google analytics] and
+[jekyll-feed].
 
 Check the [github repository] for more information.
 

@@ -20,14 +20,11 @@ description: > # this means to ignore newlines until "baseurl:"
   photography and about page.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-logo: /assets/images/logo.png
-lang: en_US
 
 author:
   name: Virtual Munky
   bio: Jekyll theme for portfolio websites
   location: Antwerp, BE
-  twitter: GeertArien
 
 twitter:
   username: geertarien
@@ -37,13 +34,6 @@ github:
   username:  geertarien
 flickr:
   username: geertarien
-
-social:
-  name:
-  links:
-
-webmaster_verifications:
-  bing:
 
 google_analytics:
 
@@ -61,10 +51,6 @@ collections:
     type: project
 
 defaults:
-  - scope:
-      path: ""
-    values:
-      image: /assets/images/logo.png
   -
     scope:
       path: ""
@@ -83,7 +69,6 @@ markdown: kramdown
 
 gems:
   - jekyll-feed
-  - jekyll-seo-tag
 
 exclude:
   - Gemfile

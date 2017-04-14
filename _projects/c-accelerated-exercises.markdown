@@ -17,12 +17,10 @@ et, duis cras ad. Tellus eget ut, eu ac mauris. Vel nisl arcu mauris fermentum
 viverra aliquet, velit morbi mi eget pulvinar aliquam netus, et nulla
 ullamcorper vitae convallis non aptent, nullam viverra quam sit sem.
 
-{% include image.html
-name="c-accelerated.jpg"
-caption="Aliquam pellentesque justo, consequat morbi wisi ultricies sit."
-alt="Accelerated C++"
-center=true
-%}
+<figure class="center">
+<img src="/assets/images/projects/c-accelerated-exercises/c-accelerated.jpg" />
+<figcaption>Aliquam pellentesque justo, consequat morbi wisi ultricies sit.</figcaption>
+</figure>
 
 _Dui lorem tortor_ integer tortor auctor, id etiam tempus cursus tellus pede
 phasellus, _vestibulum curabitur_ metus massa. Tempus aliquet nibh. Vitae eum

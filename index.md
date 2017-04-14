@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: home
 title: Blog
 permalink: /
 order: 1

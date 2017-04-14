@@ -16,10 +16,10 @@ accommodare nec te. An vis mollis inermis, ea blandit democritum sea, no tempor
 accusam. Ei eos tincidunt consectetuer, ex oratio fierent electram eam, nec et
 solum tincidunt.
 
-{% include image.html
-name="hello-world.jpg"
-caption="Id putant impetus quaestio sed, ridens salutatus assentior ei sed."
-%}
+<figure>
+<img src="/assets/images/posts/2017-04-01-hello-world/hello-world.jpg" />
+<figcaption>Id putant impetus quaestio sed, ridens salutatus assentior ei sed.</figcaption>
+</figure>
 
 In quando mediocritatem eam. Mea ea natum posse mnesarchum. Solet causae vis ne.
 His harum omittam adipiscing te. Wisi fuisset quaestio id has. Sea id option
@@ -42,11 +42,10 @@ In vix graeci virtute, ad nam virtute dissentiet. Ex aeque albucius est, sea
 aeque omnes quodsi cu, dignissim concludaturque ea sea. Etiam mandamus
 deseruisse duo ei, ornatus nostrum disputando ne duo.
 
-{% include image.html
-name="skyline-antwerp.jpg"
-caption="Sit elitr oratio at, ius timeam tritani voluptaria ea."
-alt="Skyline Antwerp"
-%}
+<figure>
+<img src="/assets/images/posts/2017-04-01-hello-world/skyline-antwerp.jpg" />
+<figcaption>Sit elitr oratio at, ius timeam tritani voluptaria ea.</figcaption>
+</figure>
 
 Ne libris mnesarchum consectetuer quo. Ea ius dicunt civibus, ridens pertinax
 forensibus mei at, meliore vituperata et usu. Mazim salutandi maluisset ius id.
