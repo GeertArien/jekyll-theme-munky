@@ -6,6 +6,28 @@
 
 ![munky theme preview](/screenshot.png)
 
+## Table of contents
+
+  * [Installation](#installation)
+  * [Getting started](#getting-started)
+  * [Contents At-A-Glance](#contents-at-a-glance)
+    * [Layouts](#layouts)
+    * [Includes](#includes)
+    * [Sass](#sass)
+    * [Assets](#assets)
+  * [Usage](#usage)
+    * [General](#general)
+    * [Pages](#pages)
+    * [Blogposts](#blogposts)
+    * [Projects](#projects)
+    * [Photography gallery](#photography-gallery)
+    * [About me page](#about-me-page)
+    * [Enabling comments (via Disqus)](#enabling-comments-via-disqus)
+    * [Enabling Google Analytics](#enabling-google-analytics)
+    * [Customization](#customization)
+  * [Contributing](#contributing)
+  * [License](#license)
+
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
