@@ -10,11 +10,6 @@
 
   * [Installation](#installation)
   * [Getting started](#getting-started)
-  * [Contents At-A-Glance](#contents-at-a-glance)
-    * [Layouts](#layouts)
-    * [Includes](#includes)
-    * [Sass](#sass)
-    * [Assets](#assets)
   * [Usage](#usage)
     * [General](#general)
     * [Pages](#pages)
@@ -25,6 +20,11 @@
     * [Customization](#customization)
     * [Enabling comments (via Disqus)](#enabling-comments-via-disqus)
     * [Enabling Google Analytics](#enabling-google-analytics)
+  * [Contents At-A-Glance](#contents-at-a-glance)
+    * [Layouts](#layouts)
+    * [Includes](#includes)
+    * [Sass](#sass)
+    * [Assets](#assets)
   * [Contributing](#contributing)
   * [License](#license)
 
@@ -49,7 +49,7 @@ And then execute:
 ## Getting started
 
 Wether you're using munky as a theme gem or as a fork, the easiest way to
-get started is to copy the content from the `demo` folder to your jekyll
+get started is to copy the content from the [`demo`](demo) folder to your jekyll
 website's root folder. It adds all the required files and settings
 to get the most of out of the theme and adds some example data to get started.
 
@@ -81,63 +81,6 @@ defaults:
     values:
       type: "project"
 ```
-
-## Contents At-A-Glance
-
-### Layouts
-
-Refers to files within the `_layouts` directory, that define the markup for your theme.
-
-  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
-  - `home.html` &mdash; The layout for your landing-page / home-page / index-page.
-  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
-  - `post.html` &mdash; The layout for your posts and projects.
-  - `about.html` &mdash; The layout for your about-page.
-  - `photography.html` &mdash; The layout for your photography-page.
-  - `projects.html` &mdash; The layout for your projects-page.
-
-### Includes
-
-Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
-
-  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
-  - `footer.html` &mdash; Defines the site's footer section.
-  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
-  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-  - `header.html` &mdash; Defines the site's main header section.
-  - `sidebar.html` &mdash; Defines the site's sidebar section.
-  - `github-buttons.html` &mdash; Inserts github repository buttons for projects.
-  - `share-buttons.html` &mdash; Inserts social media share buttons for projects and posts.
-  - `image.html` &mdash; Defines how are images defined in markdown are generated.
-
-### Sass
-
-Refers to `.scss` files within the `_sass` directory that define the theme's styles.
-
-  - `munky.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
-  - `munky/*.scss` &mdash; Sass partials that are imported by `munky.scss`.
-  - `font-awesome/font-awesome.scss` &mdash; Imports sass partials for font-awesome icons.
-
-### Assets
-
-Refers to various asset files within the `assets` directory.
-Contains the `main.scss` that imports sass files from within the `_sass`
-directory. This `main.scss` is what gets processed into the theme's main
-stylesheet `main.css` called by `_layouts/default.html` via `_includes/head.html`.
-
-This directory can include sub-directories to manage assets of similar type,
-and will be copied over as is, to the final transformed site directory.
-
-The following sub-directories are required:
-
-  - `css` &mdash; Contains the main `.scss` file as well as the `simplelightbox.scss` file for the configuration of the photo gallery.
-  - `downloads` &mdash; Place downloadable content for projects in this directory.
-  - `fonts` &mdash; Contains font-awesome font files for icons.
-  - `javascripts` &mdash; Directory with jquery, simple-lightbox and custom javascript files.
-  - `images` &mdash; The root directory contains side wide images such as logos and profile pictures.
-    - `photography` &mdash; Place photographs with their thumbnails in this directory.
-    - `posts` &mdash; Images for the posts, each post has his own sub-directory corresponding with the markdown filename.
-    - `projects` &mdash; Images for the projects, each project has his own sub-directory corresponding with the markdown filename.
 
 ## Usage
 
@@ -243,7 +186,8 @@ the following variables:
   - gallery
 ```
 
-The following markdown files are required in your jekyll site's root folder:
+The following markdown files make up the 4 main sections of the theme. Only
+`index.md` is required:
 
   - `index.md` &mdash; Layout: *home*
   - `projects.md` &mdash; Layout: *projects*
@@ -280,7 +224,7 @@ Projects use the *post* layout but add some extra features through the following
 FrontMatter variables:
 
 ```yaml
-  # The description for the project overview page.
+  # The description shown on the project overview page.
   description: Ultrices dapibus felis dolor sed, augue scelerisque, ante ligula
                aenean aliquam feugiat eget.
   # Link to the github repository of the project. To use this feature you need
@@ -289,7 +233,7 @@ FrontMatter variables:
   # Only in case the repo is not set, you can use the download variable to link
   # to a file in the /assets/download directory.
   download: example.zip
-  # Link to the image for the project overview page.
+  # Link to the image shown on the project overview page.
   image: /assets/images/projects/example.jpg
 ```
 
@@ -389,6 +333,63 @@ To enable Google Anaytics, add the following lines to your Jekyll site's `_confi
 ```
 
 Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+
+## Contents At-A-Glance
+
+### Layouts
+
+Refers to files within the `_layouts` directory, that define the markup for your theme.
+
+  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
+  - `home.html` &mdash; The layout for your landing-page / home-page / index-page.
+  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
+  - `post.html` &mdash; The layout for your posts and projects.
+  - `about.html` &mdash; The layout for your about-page.
+  - `photography.html` &mdash; The layout for your photography-page.
+  - `projects.html` &mdash; The layout for your projects-page.
+
+### Includes
+
+Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
+
+  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
+  - `footer.html` &mdash; Defines the site's footer section.
+  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
+  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
+  - `header.html` &mdash; Defines the site's main header section.
+  - `sidebar.html` &mdash; Defines the site's sidebar section.
+  - `github-buttons.html` &mdash; Inserts github repository buttons for projects.
+  - `share-buttons.html` &mdash; Inserts social media share buttons for projects and posts.
+  - `image.html` &mdash; Defines how images defined in markdown are generated.
+
+### Sass
+
+Refers to `.scss` files within the `_sass` directory that define the theme's styles.
+
+  - `munky.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
+  - `munky/*.scss` &mdash; Sass partials that are imported by `munky.scss`.
+  - `font-awesome/font-awesome.scss` &mdash; Imports sass partials for font-awesome icons.
+
+### Assets
+
+Refers to various asset files within the `assets` directory.
+Contains the `main.scss` that imports sass files from within the `_sass`
+directory. This `main.scss` is what gets processed into the theme's main
+stylesheet `main.css` called by `_layouts/default.html` via `_includes/head.html`.
+
+This directory can include sub-directories to manage assets of similar type,
+and will be copied over as is, to the final transformed site directory.
+
+The following sub-directories are required:
+
+  - `css` &mdash; Contains the main `.scss` file as well as the `simplelightbox.scss` file for the configuration of the photo gallery.
+  - `downloads` &mdash; Place downloadable content for projects in this directory.
+  - `fonts` &mdash; Contains font-awesome font files for icons.
+  - `javascripts` &mdash; Directory with jquery, simple-lightbox and custom javascript files.
+  - `images` &mdash; The root directory contains side wide images such as logos and profile pictures.
+    - `photography` &mdash; Place photographs with their thumbnails in this directory.
+    - `posts` &mdash; Images for posts, each post has his own sub-directory corresponding with its filename.
+    - `projects` &mdash; Images for projects, each project has his own sub-directory corresponding with its filename.
 
 ## Contributing
 
