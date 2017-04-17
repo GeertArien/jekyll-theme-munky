@@ -10,6 +10,7 @@
 
   * [Installation](#installation)
   * [Getting started](#getting-started)
+  * [jekyll-seo-tag plugin](#jekyll-seo-tag-plugin)
   * [Usage](#usage)
     * [General](#general)
     * [Pages](#pages)
@@ -81,6 +82,36 @@ defaults:
     values:
       type: "project"
 ```
+
+## jekyll-seo-tag plugin
+
+Although not a requirement to run the theme, Munky is build with
+[jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) integration in mind.
+What this means is that many of the FrontMatter variables used by the theme are
+the same ones jekyll-seo-tag uses to build it's metadata tags.
+
+To install the plugin add this line to your Jekyll site's Gemfile:
+
+```ruby
+gem 'jekyll-seo-tag'
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+gems:
+  - jekyll-seo-tag
+```
+
+And then execute:
+
+    $ bundle
+
+Munky theme will detect the plugin and place the requird `{% seo %}` tag in your
+website's `<head></head>` section.
+
+For a more general overview of the plugin, please refer to the
+[jekyll-seo-tag documentation](https://github.com/jekyll/jekyll-seo-tag).
 
 ## Usage
 
