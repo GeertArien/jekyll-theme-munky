@@ -24,4 +24,10 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  {% if site.gems contains "jekyll-seo-tag" %}
+    {% include seo-tag.html %}
+  {% else %}
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+  {% endif %}
+
 </head>
